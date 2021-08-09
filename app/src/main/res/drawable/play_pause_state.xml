@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:state_checked="true">
+        <layer-list>
+            <item android:right="-5dp" android:left="-5dp" android:top="-5dp" android:bottom="-5dp" android:drawable="@drawable/pause_icon1"/>
+        </layer-list>
+    </item>
+    <item android:state_pressed="false" android:state_checked="true">
+        <layer-list>
+            <item android:drawable="@drawable/pause_icon1"/>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true" android:state_checked="false">
+        <layer-list>
+            <item android:right="-5dp" android:left="-5dp" android:top="-5dp" android:bottom="-5dp" android:drawable="@drawable/play_icon1"/>
+        </layer-list>
+    </item>
+    <item android:state_pressed="false" android:state_checked="false">
+        <layer-list>
+            <item android:drawable="@drawable/play_icon1"/>
+        </layer-list>
+    </item>
+</selector>

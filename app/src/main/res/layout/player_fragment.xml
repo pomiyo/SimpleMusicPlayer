@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/player_container"
+    android:visibility="gone"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/music_icon"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/note_icon1"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_gravity="start|bottom"
+                android:layout_marginLeft="14dp"/>
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_gravity="end|bottom"
+                android:layout_marginRight="14dp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <com.example.audiomedia.CheckableView
+                android:id="@+id/prev_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/prev_icon_selectable"
+                android:layout_gravity="center"
+                android:layout_marginRight="70dp"
+                android:layout_marginEnd="70dp" />
+            <com.example.audiomedia.CheckableView
+                android:id="@+id/play_pause_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/play_pause_state"
+                android:layout_gravity="center"/>
+            <com.example.audiomedia.CheckableView
+                android:id="@+id/next_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/next_icon_selectable"
+                android:layout_gravity="center"
+                android:layout_marginLeft="70dp"
+                android:layout_marginStart="70dp" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+
+    <!--    action bar -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="2dp"
+        android:layout_gravity="top"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_gravity="top"
+        android:layout_marginTop="50dp"/>
+
+</FrameLayout>
